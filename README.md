@@ -4,6 +4,8 @@ This program implements same OTP algorithm with [Garena](https://www.garena.tw/)
 
 ## Algorithm
 
+Actually it's [RFC-6238]( https://tools.ietf.org/html/rfc6238). Algorith descripted below:
+
 Input `key` is 16chars base-32 encoded string.
 
 ```python
@@ -25,6 +27,17 @@ sequance = subbytes(raw_out, index, 4) # take 4bytes from raw_out
 number = bigendian_to_int32(sequance) & 0x7fffffff
 # 9. compute OTP code
 otp_code = padding_zero(number % 1000000, 6)
+```
+
+## Python alternative
+
+```python
+import time
+import pyotp # pip install pyotp
+
+h = pyotp.HOTP('KKKKKKKKKKKKKKKK')
+otp = h.at(int(time.time() / 180))
+print(otp)
 ```
 
 ## TODO
