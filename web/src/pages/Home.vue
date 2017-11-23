@@ -33,6 +33,7 @@ export default {
 
   input
     width: 18rem
+    max-width: 100%
     font-size: 1.6rem
     font-family: 'Source Code Pro', Consolas, monospace
     margin-bottom: 1.2em
