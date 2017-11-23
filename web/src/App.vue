@@ -1,64 +1,50 @@
-<template>
-  <div id="app">
-    <header class="center">
-      <h1>Garena 驗證器</h1>
-    </header>
+<template lang="pug">
+#app
+  header.center
+    h1 Garena 驗證器
 
-    <nav class="center">
-      <ul>
-        <li>
-          <router-link to="/">首頁</router-link>
-        </li>
-        <li>
-          <router-link to="/about">關於</router-link>
-        </li>
-      </ul>
-    </nav>
+  nav.center
+    ul
+      li
+        router-link(to="/") 首頁
+      li
+        router-link(to="/about") 關於
 
-    <router-view></router-view>
-  </div>
+  router-view
 </template>
 
 <script>
-export default {
-}
+export default {}
 </script>
 
-<style lang="scss">
-html {
-  background-color: #eee;
-}
+<style lang="sass">
+html
+  background-color: #eee
 
-#app {
-  font-family: 'Avenir', Helvetica, 'Noto Sans CJK TC', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  padding: 0 .75rem;
-}
+#app
+  font-family: 'Avenir', Helvetica, 'Noto Sans CJK TC', Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: #2c3e50
+  padding: 0 .75rem
 
-a {
-  color: #0f7db7;
-}
+a
+  color: #0f7db7
 
-nav ul {
-  padding: 0;
+nav ul
+  padding: 0
 
-  li {
-    list-style: none;
-    display: inline-block;
-    padding: 0;
+  li
+    list-style: none
+    display: inline-block
+    padding: 0
 
-    a { // router-link
-      font-size: 1.25rem;
-      padding: .5rem 2rem;
-      color: #0f337d;
-      text-decoration: none;
-    }
-  }
-}
+    a // router-link
+      font-size: 1.25rem
+      padding: .5rem 2rem
+      color: #0f337d
+      text-decoration: none
 
-.center {
-  text-align: center;
-}
+.center
+  text-align: center
 </style>

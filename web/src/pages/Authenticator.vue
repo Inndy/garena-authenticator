@@ -1,10 +1,10 @@
-<template>
-  <div id="authenticator" class="center">
-    <p>目前驗證碼：{{otp}}</p>
-    <p><button v-clipboard:copy="otp">點我複製</button></p>
-    <p>有效時間剩餘：{{(expire_in|0)}} 秒</p>
-    <p class="small">你可以把這頁加入書籤，方便日後使用。</p>
-  </div>
+<template lang="pug">
+#authenticator.center
+  p 目前驗證碼： {{otp}}
+  p
+    button(v-clipboard:copy="otp") 點我複製
+  p 有效時間剩餘：{{(expire_in|0)}} 秒
+  p.small 你可以把這頁加入書籤，方便日後使用。
 </template>
 
 <script>
@@ -59,15 +59,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#authenticator {
-  font-size: 1.5rem;
-  button {
-    font-size: 2rem;
-  }
-
-  .small {
-    font-size: 1rem;
-  }
-}
+<style lang="sass">
+#authenticator
+  font-size: 1.5rem
+  button
+    font-size: 2rem
+  .small
+    font-size: 1rem
 </style>

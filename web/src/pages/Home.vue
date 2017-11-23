@@ -1,14 +1,10 @@
-<template>
-  <div class="center" id="home">
-    <div>
-      <h3>輸入16位密鑰：</h3>
-      <input type="text" class="center" v-model="key"
-        placeholder="XXXXYYYY55556666" maxlength="16">
-    </div>
-    <div>
-      <button @click="start" :disabled="verified">現在就開始使用</button>
-    </div>
-  </div>
+<template lang="pug">
+#home.center
+  div
+    h3 輸入16位密鑰：
+    input.center(type="text", v-model="key", placeholder="XXXXYYYY55556666", maxlength="16")
+  div
+    button(@click="start", :disabled="verified") 現在就開始使用
 </template>
 
 <script>
@@ -31,20 +27,17 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#home {
-  padding-top: 3rem;
+<style lang="sass">
+#home
+  padding-top: 3rem
 
-  input {
-    width: 18rem;
-    font-size: 1.6rem;
-    font-family: 'Source Code Pro', Consolas, monospace;
-    margin-bottom: 1.2em;
-  }
+  input
+    width: 18rem
+    font-size: 1.6rem
+    font-family: 'Source Code Pro', Consolas, monospace
+    margin-bottom: 1.2em
 
-  button {
-    width: 18rem;
-    font-size: 2rem;
-  }
-}
+  button
+    width: 18rem
+    font-size: 2rem
 </style>
